@@ -21,6 +21,9 @@ if ($("#form-name-block input").val() !== "") {
 
   console.log($("#form-name-block input").val());
 
+  const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  const email = $("#form-email-block input").val();
+
   if ($("#form-email-block input").val() === "") {
     $("#form-email-block input").addClass("input-error");
     $("#form-email-block label").addClass("label-error");
@@ -28,12 +31,19 @@ if ($("#form-name-block input").val() !== "") {
     $("#form-email-block span").remove();
 
     $("#form-email-block").append("<span id='error-message'>Email is required</span>");
+  } else if (re.test(email) === false) {
+    $("#form-email-block input").addClass("input-error");
+    $("#form-email-block label").addClass("label-error");
+
+    $("#form-email-block span").remove();
+    $("#form-email-block").append("<span id='email-error-message'>Email must have an @ sign</span>");
   }
 
-  if ($("#form-email-block input").val() !== "") {
+  if (email !== "" && re.test(email) === true) {
     $("#form-email-block input").removeClass("input-error");
     $("#form-email-block label").removeClass("label-error");
 
     $("#form-email-block span").remove();
   }
+
 });
