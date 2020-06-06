@@ -21,5 +21,19 @@ if ($("#form-name-block input").val() !== "") {
 
   console.log($("#form-name-block input").val());
 
-  if ($("#form-email-block input").val() === "")
+  if ($("#form-email-block input").val() === "") {
+    $("#form-email-block input").addClass("input-error");
+    $("#form-email-block label").addClass("label-error");
+
+    $("#form-email-block span").remove();
+
+    $("#form-email-block").append("<span id='error-message'>Email is required</span>");
+  }
+
+  if ($("#form-email-block input").val() !== "") {
+    $("#form-email-block input").removeClass("input-error");
+    $("#form-email-block label").removeClass("label-error");
+
+    $("#form-email-block span").remove();
+  }
 });
