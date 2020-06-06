@@ -4,8 +4,8 @@ $("#submit button").click(function(event) {
   if ($("#form-name-block input").val() === "") {
     console.log("Name is empty");
 
-    $("#form-name-block input").addClass("error");
-    $("#form-name-block label").addClass("error");
+    $("#form-name-block input").addClass("input-error");
+    $("#form-name-block label").addClass("label-error");
   }
 
   console.log($("#form-name-block input").val());
