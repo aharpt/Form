@@ -20,4 +20,6 @@ if ($("#form-name-block input").val() !== "") {
 }
 
   console.log($("#form-name-block input").val());
+
+  if ($("#form-email-block input").val() === "")
 });
