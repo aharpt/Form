@@ -6,6 +6,8 @@ $("#submit button").click(function(event) {
 
     $("#form-name-block input").addClass("input-error");
     $("#form-name-block label").addClass("label-error");
+
+    $("#form-name-block").append("<span id='error-message'>Name is required</span>");
   }
 
   console.log($("#form-name-block input").val());

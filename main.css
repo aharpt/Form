@@ -15,3 +15,10 @@ div {
 .label-error {
   color: #c21807;
 }
+
+#error-message {
+  display: block;
+  color: #c21807;
+  margin-left: 105px;
+  font-size: 0.85em;
+}
