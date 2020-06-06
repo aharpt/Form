@@ -5,6 +5,7 @@ $("#submit button").click(function(event) {
     console.log("Name is empty");
 
     $("#form-name-block input").addClass("error");
+    $("#form-name-block label").addClass("error");
   }
 
   console.log($("#form-name-block input").val());

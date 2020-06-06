@@ -8,6 +8,10 @@ div {
   align-self: center;
 }
 
-.error {
+.input-error {
   border: 2px solid #c21807;
+}
+
+.label-error {
+  color: #c21807;
 }
